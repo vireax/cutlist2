@@ -1,0 +1,123 @@
+/***** Boxes *****/
+div.box1 {
+	padding: 3px;
+	border: 1px solid #999;
+	margin-top: 10px;
+	background-color: #eee;
+	border-radius: 4px;
+	font-size: 14px;
+}
+div.box1 h1, div.box1 h2 {
+	border-radius: 2px;
+	background-color: #0099da;
+	margin-bottom: 3px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 300;
+	height: 30px;
+	line-height: 30px;
+	font-family: 'Roboto', Arial, sans-serif;
+	padding: 3px;
+	padding-left: 5px;
+}
+h1.trigger{
+	border-radius: 2px;
+	padding: 1em;
+	margin:10px auto;
+	color: #345;
+	font-size: 2em;
+	font-family: 'Roboto', Arial, sans-serif;
+	border-bottom: 1px solid #ccc;
+	
+}
+h1.trigger:hover{
+	cursor: pointer;
+	background:#eee;
+}
+
+
+div.box2 {
+	margin-top: 10px;
+	text-shadow: -1px -1px 0 #fff;
+}
+
+div.box2 b {
+	color: #2f4e6f;
+}
+
+div.box2 p.classy {
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 1px dashed #999;
+}
+
+div.box2 h1 {
+	font-family: 'Roboto Condensed', Arial, sans-serif;
+	font-weight: 400;
+	color: #2f4e6f;
+	font-size: 25px;
+}
+
+div.box2 h1 a {
+	text-decoration: none;
+	color: #2f4e64;
+}
+
+div.box2 h1 a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+blockquote {
+	border-left: 1px dashed #999;
+	padding-left: 15px;
+	margin: 5px 5px 5px 15px;
+}
+
+blockquote p:first-letter {
+	font-size: 20px;
+	margin-right: -3px;
+}
+
+blockquote p {
+	margin-bottom: 5px;
+}
+
+blockquote cite {
+	color: #999999;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+}
+ 
+blockquote cite:before {
+	content: "\2014 \2009";
+}
+
+.documentation {
+	font-size: 12px;
+	padding: 5px 15px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: 2px solid #0099da;
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	margin: 0 auto;
+	border-top: 10px solid #0099da;
+}
+
+label.text {
+    font-size: 10pt;
+    font-weight: bold;
+ }
+ 
+ input.text {
+    font-size: 10pt;
+    font-weight: bold;
+ }
