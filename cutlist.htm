@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Cutlist (2)</title>
+	<link rel="stylesheet" href="cutlist_files/vendors.css" type="text/css">
+	<link rel="stylesheet" href="cutlist_files/css.css"  type="text/css">
+	<link rel="stylesheet" href="cutlist_files/css_002.css"  type="text/css">
+	<link rel="stylesheet" href="cutlist_files/reset.css" type="text/css">
+	<link rel="stylesheet" href="cutlist_files/960.css" type="text/css">
+	<link rel="stylesheet" href="cutlist_files/main.css" type="text/css">
+	<link rel="stylesheet" href="cutlist_files/cutlist.css" type="text/css">
+	<script src="cutlist_files/sprintf.js"></script>
+	<!--script src="cutlist_files/jquery-1.js"></script-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+	<!--
+	
+	PLEASE REFER TO THE ORIGINAL CODE: 
+	https://www.kurraglenindustries.com.au/linear-cutting-list-calculator.htm 
+	This page allow bulk copy and import to find the optimized bar number, and nothing more.
+	
+	-->
+	  <script> <!-- Slide toggle -->
+		$(document).ready(function() {
+		$(".trigger").click(function(){
+				$(this).next(".slidePanel").slideToggle("medium");
+			});
+		});
+	  </script>
+</head>
+
+<body>
+<div class="container_12">
+	<div id="data">
+	<h1 class="trigger">1D cut optimization</h1>
+	<div class="slidePanel">
+	
+	<div id="header" class="grid_12">
+		<div class="box1">
+		<h2 class="trigger">Description</h2>
+		<p class="slidePanel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</div>
+	
+	
+	<div class="grid_4" style="text-align: center">
+		<div class="documentation">The cuts you want to make.</div>
+		<div class="arrow-down"></div>
+	</div>
+	<div class="grid_4" style="text-align: center">
+		<div class="documentation">Any stock you have on hand.</div>
+		<div class="arrow-down"></div>
+	</div>
+	<div class="grid_4" style="text-align: center">
+		<div class="documentation">Standard stock length, kerf, etc.</div>
+		<div class="arrow-down"></div>
+	</div>
+	<div class="clear"></div>
+	
+	<div class="grid_4">
+		<div class="box1 top-box">
+			<h2>Cuts</h2>
+
+			
+			<form id="import-form" class="list-form" > 
+				<textarea id="import-data-in" spellcheck="false" class="import-data" placeholder="6000	5	Pipe	
+12000	0	Pipe2
+... 	...	..."></textarea>
+				<input value="Import" type="submit"><button onclick="clearText()">Clear</button>
+				
+			</form>
+			<form id="cut-form" class="list-form" style="float:left; display:none;"> 
+				<label class="text">Length</label><input name="length" type="text"> <br>
+				<label class="text">Quantity</label><input name="quantity" value="1" type="text"><br>
+				<label class="text">&nbsp;</label><input value="Add" type="submit"><br>				
+				<div style="display: none;" id="overflow-message">
+					Cuts are too large for the stock.
+				</div>
+			</form>
+			<div id="demo"></div>
+            <div id="dvContents">
+				<div>
+					<ul id="cut-list" class="list-box"></ul>
+					<span class="name" style="color: #999; display:block;margin-left: 7px;font-size:12px">* Click to Remove</span>
+				</div>
+
+			</div>
+			<div class="clear"></div>
+		
+			
+		</div>
+	</div>
+	<div class="grid_4">
+		<div class="box1 top-box">
+			<h2>Stock</h2>
+			
+			
+			<form id="stock-form" class="list-form" style="float: left">
+				<label class="text">Length</label><input name="length" type="text"><br>
+				<label class="text">Quantity</label><input name="quantity" value="1" type="text"><br>
+				<label class="text">&nbsp;</label><input value="Add" type="submit"><br>				
+			</form>
+			<div style="clear:both; padding:1em;">
+				<ul id="stock-list" class="list-box"></ul>
+               	<span class="name" style="color: #999; display:block;margin-left: 7px;font-size:12px">* Click to Remove</span>
+			</div>
+			<div class="clear"></div>
+			
+		</div>
+	</div>
+	<div class="grid_4">
+		<div class="box1 top-box">
+			<h2>Settings</h2>
+			<form id="settings-form">
+				<label class="text">Material</label><input name="cutlist-name" type="text"><br>
+				<label class="text">Stock Length</label><input name="stock-length" value="6400" type="text"><br>
+				<label class="text">Kerf</label><input name="kerf" value="4.0"><br>
+			</form>
+			<div class="clear"></div>
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="clear"></div>	
+	
+	<div id="result" class="grid_12">
+		<div id="floor" class="box1" style="height: auto; margin-bottom:20px; padding-bottom:20px;overflow:hidden;">
+			<h2>TOTAL = 0 Bars</h2>
+		</div>
+	</div>
+
+
+
+</div>
+<script src="cutlist_files/cutlist.js"></script>
+</body></html>
